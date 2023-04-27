@@ -1,0 +1,132 @@
+.logo {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 55rem;
+  transform: translate(-50%, -50%);
+}
+
+.col1 {
+  padding-top: 4rem;
+}
+
+.col1,
+.col2 {
+  display: inline-block;
+  width: 49%;
+  vertical-align: top;
+}
+
+.fielddesc {
+  color: #687078;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+input {
+  color: #16191f;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  border: 1px solid #aab7b8;
+  border: 1px solid grey;
+  height: 2rem;
+}
+.signinexisting {
+  background: #fff;
+  color: #545b64;
+  border-color: #545b64;
+  border-radius: 4px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+}
+.signinexisting:hover {
+  color: black;
+}
+.verifyemail {
+  background: #f90;
+  width: 100%;
+  color: #16191f;
+  border-color: #f90;
+  position: relative;
+  border: none;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.verifyemail:hover {
+  background: #9f5f00;
+  color: #16191f;
+  border-color: #9f5f00;
+  border: none;
+  position: relative;
+  text-decoration: none;
+}
+
+.divider {
+  display: inline-block;
+  position: relative;
+  width: 2%;
+  height: 25rem;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background-color: gray;
+}
+.col2contents {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.divideror {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.divideror::before,
+.divideror::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+
+.or-text {
+  display: inline-block;
+  padding: 0 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  .col1,
+  .divider {
+    display: none;
+  }
+  .col2 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 20rem;
+    transform: translate(-50%, -50%);
+  }
+}

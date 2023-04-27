@@ -1,0 +1,15 @@
+// Prevents additional console window on Windows in release, DO NOT REMOVE!!
+#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+
+use crate::progress::save_generator::initiate_save_process;
+
+mod progress;
+
+// Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
+
+fn main() {
+    tauri::Builder::default()
+        .invoke_handler(tauri::generate_handler![initiate_save_process])
+        .run(tauri::generate_context!())
+        .expect("error while running tauri application");
+}
